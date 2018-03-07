@@ -33,6 +33,7 @@ module.exports = function (options) {
 
       options.ngModuleName = options.ngModuleName || 'lbServices';
       options.apiUrl = options.apiUrl || app.get('restApiRoot') || '/api';
+      options.authHeader = options.authHeader || 'authorization';
 
       gutil.log('Loaded LoopBack app', gutil.colors.magenta(file.path));
       gutil.log('Generating',
@@ -44,7 +45,8 @@ module.exports = function (options) {
       var script = generator.services(
         app,
         options.ngModuleName,
-        options.apiUrl
+        options.apiUrl,
+        options.authHeader,
       );
 
       file.contents = new Buffer(script);

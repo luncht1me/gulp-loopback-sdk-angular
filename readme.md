@@ -44,6 +44,13 @@ Name for the generated AngularJS module.
 Type: `String`
 Default: The value configured in the LoopBack application via app.set('restApiRoot') or `/api`
 
+##### options.authHeader
+
+Type: `String`
+Default: 'authorization'
+
+Custom Authorization Token header key. Loopback token middleware must be configured to accept custom header.
+
 ## Everything Else
 
 http://docs.strongloop.com/display/LB/AngularJS+JavaScript+SDK
