@@ -46,7 +46,7 @@ module.exports = function (options) {
         app,
         options.ngModuleName,
         options.apiUrl,
-        options.authHeader,
+        options.authHeader
       );
 
       file.contents = new Buffer(script);
